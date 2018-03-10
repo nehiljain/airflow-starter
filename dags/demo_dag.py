@@ -16,7 +16,7 @@ args = {
 dag = DAG(
     dag_id='demo_dag',
     default_args=args,
-    schedule_interval=None)
+    schedule_interval='*/5 * * * *')
 
 
 def print_context(ds, **kwargs):

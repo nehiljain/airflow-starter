@@ -12,7 +12,7 @@ name = "pypi"
 [packages]
 
 requests = "*"
-apache-airflow = "*"
+apache-airflow = {extras = ["s3", "postgres", "celery"]}
 pre-commit = "*"
 python-dotenv = "*"
 pytest = "*"
