@@ -3,6 +3,7 @@ from airflow.models import DagBag
 
 
 def test_airflow_dagbag():
+  print(os.getenv('AIRFLOW_HOME'))
   dagbag = DagBag(os.getenv('AIRFLOW_HOME'))
   assert dagbag.size() > 0
   report = dagbag.dagbag_report()
