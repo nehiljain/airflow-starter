@@ -17,6 +17,6 @@ before_install:
   - pip install pipenv
   - pipenv install
 install:
-  - pipenv install
+  - echo $AIRFLOW_HOME
 script:
   - pipenv run pytest tests
