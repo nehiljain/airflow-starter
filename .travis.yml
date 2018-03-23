@@ -1,7 +1,7 @@
 
 language: python
 
-sudo: false
+sudo: true
 
 python:
   - 3.5
@@ -11,12 +11,13 @@ env:
   global:
     - PIPENV_VENV_IN_PROJECT=1
     - PIPENV_IGNORE_VIRTUALENVS=1
-    - AIRFLOW_CONFIG=$TRAVIS_BUILD_DIR/airflow.cfg
 
 before_install:
   - pip install pipenv
   - pipenv install
 install:
   - echo $AIRFLOW_HOME
+  - echo $AIRFLOW_CONFIG
+  - echo $TRAVIS_BUILD_ID
 script:
   - pipenv run pytest tests
