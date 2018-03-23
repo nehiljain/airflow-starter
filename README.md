@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nehiljain/airflow-starter.svg?branch=master)](https://travis-ci.org/nehiljain/airflow-starter)
+
 # airflow-starter
 
 
