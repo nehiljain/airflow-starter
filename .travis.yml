@@ -11,4 +11,5 @@ install:
   - echo $AIRFLOW_CONFIG
   - echo $TRAVIS_BUILD_ID
 script:
+  - airflow initdb
   - pytest tests
