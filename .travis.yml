@@ -7,17 +7,10 @@ python:
   - 3.5
   - 3.6
 
-env:
-  global:
-    - PIPENV_VENV_IN_PROJECT=1
-    - PIPENV_IGNORE_VIRTUALENVS=1
-
-before_install:
-  - pip install pipenv
-  - pipenv install
 install:
+  - pip install -r requirements.txt
   - echo $AIRFLOW_HOME
   - echo $AIRFLOW_CONFIG
   - echo $TRAVIS_BUILD_ID
 script:
-  - pipenv run pytest tests
+  - pytest tests

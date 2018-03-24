@@ -15,16 +15,20 @@ args = {
     'start_date': airflow.utils.dates.days_ago(2)
 }
 
-dag = DAG(
-    dag_id=DAG_ID,
-    default_args=args,
-    schedule_interval='*/5 * * * *')
 
 
 def print_context(ds, **kwargs):
     pprint(kwargs)
     print(ds)
     return 'Whatever you return gets printed in the logs'
+
+
+
+dag = DAG(
+    dag_id=DAG_ID,
+    default_args=args,
+    schedule_interval='*/5 * * * *')
+
 
 stream1_task = PythonOperator(
     task_id='print_the_context_stream1',
