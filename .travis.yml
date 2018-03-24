@@ -13,3 +13,6 @@ install:
 script:
   - airflow initdb
   - pytest tests
+  - pytest --cov=./
+after_success:
+  - codecov --token=$CODECOV

@@ -17,6 +17,8 @@ pre-commit = "*"
 python-dotenv = "*"
 pytest = "*"
 honcho = "*"
+pytest-cov = "*"
+codecov = "*"
 
 
 [requires]
