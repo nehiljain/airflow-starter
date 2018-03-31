@@ -2,12 +2,10 @@ from __future__ import print_function
 from builtins import range
 import os
 import sys
+
 import airflow
-from airflow.operators.python_operator import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.models import DAG
-import time
-from pprint import pprint
 
 DAG_ID = os.path.basename(__file__).replace(".pyc", "").replace(".py", "")
 args = {

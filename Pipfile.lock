@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "38acfd4e5829ccbcfb263900e25df198b53ce06016eeaed1961c180845f0037f"
+            "sha256": "85e57179955a380ea69c42382cf4bbd936dae95d1a3c4d334c8b21c76c69063b"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -125,6 +125,10 @@
             "hashes": [],
             "version": "==0.14"
         },
+        "freezegun": {
+            "hashes": [],
+            "version": "==0.3.10"
+        },
         "funcsigs": {
             "hashes": [],
             "version": "==1.0.0"
@@ -139,7 +143,7 @@
         },
         "gitpython": {
             "hashes": [],
-            "version": "==2.1.8"
+            "version": "==2.1.9"
         },
         "gunicorn": {
             "hashes": [],
@@ -243,7 +247,7 @@
         },
         "python-dateutil": {
             "hashes": [],
-            "version": "==2.7.0"
+            "version": "==2.7.2"
         },
         "python-dotenv": {
             "hashes": [],
@@ -287,7 +291,7 @@
         },
         "sqlalchemy": {
             "hashes": [],
-            "version": "==1.2.5"
+            "version": "==1.2.6"
         },
         "tabulate": {
             "hashes": [],
