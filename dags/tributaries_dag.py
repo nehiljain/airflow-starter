@@ -21,21 +21,11 @@ dag = DAG(
     default_args=args,
     schedule_interval='*/5 * * * *')
 
-a_task = DummyOperator(task_id='a',
-                        dag=dag)
-
-
-b_task = DummyOperator(task_id='b',
-                        dag=dag)
-
-c_task = DummyOperator(task_id='c',
-                        dag=dag)
-
-d_task = DummyOperator(task_id='d',
-                        dag=dag)
-
-e_task = DummyOperator(task_id='e',
-                        dag=dag)
+a_task = DummyOperator(task_id='a', dag=dag)
+b_task = DummyOperator(task_id='b', dag=dag)
+c_task = DummyOperator(task_id='c', dag=dag)
+d_task = DummyOperator(task_id='d', dag=dag)
+e_task = DummyOperator(task_id='e', dag=dag)
 
 
 e_task.set_upstream(d_task)

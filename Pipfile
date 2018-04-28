@@ -19,6 +19,7 @@ pytest = "*"
 honcho = "*"
 pytest-cov = "*"
 codecov = "*"
+freezegun = "*"
 
 
 [requires]

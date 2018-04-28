@@ -17,6 +17,9 @@ def test_airflow_dagbag():
 
 
 def test_dynamic_start_date():
+  """
+  Tests that start date for dags are set relative to instantiation date not a fixed date.
+  """
   start_dates = {}
   freezer = freeze_time("2200-02-20")
   freezer.start()

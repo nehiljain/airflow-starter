@@ -21,14 +21,9 @@ dag = DAG(
     default_args=args,
     schedule_interval='*/5 * * * *')
 
-source = DummyOperator(task_id='source',
-                        dag=dag)
-
-a_task = DummyOperator(task_id='a',
-                        dag=dag)
-
-b_task = DummyOperator(task_id='b',
-                        dag=dag)
+source = DummyOperator(task_id='source', dag=dag)
+a_task = DummyOperator(task_id='a', dag=dag)
+b_task = DummyOperator(task_id='b', dag=dag)
 
 source >> a_task
 a_task >> b_task
