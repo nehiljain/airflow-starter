@@ -7,7 +7,7 @@ import airflow
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.models import DAG
 
-DAG_ID = os.path.basename(__file__).replace(".pyc", "").replace(".py", "")
+DAG_ID = os.path.basename(__file__).replace('.pyc', '').replace('.py', '')
 args = {
     'owner': 'nehiljain',
     'start_date': airflow.utils.dates.days_ago(2)

@@ -6,7 +6,6 @@ from airflow.models import DagBag
 
 
 def test_airflow_dagbag():
-  print(os.getenv('AIRFLOW_HOME'))
   dagbag = DagBag(os.getenv('AIRFLOW_HOME'))
   assert dagbag.size() > 0
   report = dagbag.dagbag_report()
@@ -21,7 +20,7 @@ def test_dynamic_start_date():
   Tests that start date for dags are set relative to instantiation date not a fixed date.
   """
   start_dates = {}
-  freezer = freeze_time("2200-02-20")
+  freezer = freeze_time('2200-02-20')
   freezer.start()
   dagbag = DagBag(os.getenv('AIRFLOW_HOME'))
   for dag in dagbag.dags.values():
@@ -29,11 +28,15 @@ def test_dynamic_start_date():
     start_dates[dag.dag_id] = dag_start_date
   freezer.stop()
 
+  time_insensitive_dags = ['']
+  time_dependent_dags = ['']
 
-  freezer = freeze_time("2300-02-20")
+
+  freezer = freeze_time('2300-02-20')
   freezer.start()
   dagbag = DagBag(os.getenv('AIRFLOW_HOME'))
   for dag in dagbag.dags.values():
+    import pdb; pdb.set_trace()
     dag_start_date = dagbag.get_dag(dag.dag_id).default_args.get('start_date')
     assert start_dates[dag.dag_id] != dag_start_date
   freezer.stop()

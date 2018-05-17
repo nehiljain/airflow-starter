@@ -9,7 +9,7 @@ from airflow.models import DAG
 import time
 from pprint import pprint
 
-DAG_ID = os.path.basename(__file__).replace(".pyc", "").replace(".py", "")
+DAG_ID = os.path.basename(__file__).replace('.pyc', '').replace('.py', '')
 args = {
     'owner': 'nehiljain',
     'start_date': airflow.utils.dates.days_ago(2)
