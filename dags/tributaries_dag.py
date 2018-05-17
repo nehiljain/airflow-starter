@@ -30,4 +30,3 @@ e_task = DummyOperator(task_id='e', dag=dag)
 
 e_task.set_upstream(d_task)
 d_task.set_upstream([a_task, b_task, c_task])
-

@@ -22,7 +22,6 @@ def print_context(ds, **kwargs):
     return 'Whatever you return gets printed in the logs'
 
 
-
 dag = DAG(
     dag_id=DAG_ID,
     default_args=args,
@@ -48,4 +47,3 @@ start_task = DummyOperator(task_id='start_task',
                            dag=dag)
 
 start_task.set_downstream([stream1_task, stream2_task])
-

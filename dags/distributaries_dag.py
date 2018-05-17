@@ -34,5 +34,3 @@ b_task.set_downstream([c_task, e_task, g_task])
 c_task.set_downstream(d_task)
 e_task.set_downstream(f_task)
 g_task.set_downstream(h_task)
-
-

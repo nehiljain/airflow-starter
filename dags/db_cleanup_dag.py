@@ -1,7 +1,7 @@
 """"
 inspired from https://github.com/teamclairvoyant/airflow-maintenance-dags/blob/master/db-cleanup/airflow-db-cleanup.py
 """
-
+from airflow.operators import PythonOperator
 import os
 from datetime import datetime, timedelta
 import logging

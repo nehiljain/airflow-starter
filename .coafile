@@ -14,7 +14,7 @@ language = Python
 preferred_quotation = '
 
 default_actions = **: ApplyPatchAction
-
+no_orig = True
 
 [flakes]
 # Do not set default_action to ApplyPatchAction as it may lead to some
@@ -25,3 +25,14 @@ default_actions = *: ShowPatchAction
 bears = PyUnusedCodeBear
 language = Python
 remove_all_unused_imports = true
+
+[LineCounting]
+enabled = True
+
+bears = LineCountBear
+max_lines_per_file = 1000
+
+
+[autopep8]
+bears = PEP8Bear 
+default_actions = PEP8Bear: ApplyPatchAction
