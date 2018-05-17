@@ -1,0 +1,16 @@
+
+[all]
+files = **/*.py
+max_line_length = 80
+use_spaces = True
+
+[all.python]
+# Patches may conflict with autopep8 so putting them in own section so they
+# will be executed sequentially; also we need the LineLengthBear to double
+# check the line length because PEP8Bear sometimes isn't able to correct the
+# linelength.
+bears = SpaceConsistencyBear, QuotesBear
+language = Python
+preferred_quotation = '
+
+default_actions = **: ApplyPatchAction
